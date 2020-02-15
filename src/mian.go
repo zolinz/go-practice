@@ -1,9 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/zolinz/go-practie/pkg/hello"
+)
+
+
+
 
 func main() {
 	fmt.Println("Hello, zolika")
+
+		fmt.Println(hello.Hello())
 
 
 		var a int = 4
@@ -20,6 +28,9 @@ func main() {
 		ptr = &a	/* 'ptr' now contains the address of 'a'*/
 		fmt.Printf("value of a is  %d\n", a)
 		fmt.Printf("*ptr is %d.\n", *ptr)
+
+
+
 
 }
 
