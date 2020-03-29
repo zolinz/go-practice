@@ -20,8 +20,8 @@ func main(){
 
 
 func sayHi(msg string) string{
-	//fmt.Print(msg)
+	fmt.Println(msg)
 
-	msg = "Bond"
-	return msg
+	lastname := "Bond"
+	return lastname
 }
