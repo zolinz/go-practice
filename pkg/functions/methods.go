@@ -7,12 +7,13 @@ type Person struct {
 	Last string
 }
 
-
 type SecretAgent struct {
 	Person
 	Ltk bool
 }
 
+
+//interface defines method to implement
 type Human interface {
 	Speak()
 }
@@ -23,12 +24,13 @@ func (p Person) Speak() {
 	fmt.Println("I am", p.Last, " - the person speak")
 }
 
-
+// implementation is attached to a type so it becomes that interface
 func (s SecretAgent) Speak() {
 	fmt.Println("I am", s.First, s.Last)
 	fmt.Println(s.Ltk)
 }
 
+// then that interface type can be passed in
 func Bar(h Human) {
 	switch h.(type) {
 	case Person:
