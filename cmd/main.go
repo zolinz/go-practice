@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/zolinz/go-practie/pkg/hello"
+	"os"
 )
 
 
@@ -13,6 +14,14 @@ func main() {
 
 		fmt.Println(hello.Hello())
 
+		fmt.Print(os.Hostname())
+
+		 if _,err := os.Stat("/Users/zoltankovacs/zoli-int-test.config2"); os.IsNotExist(err){
+			fmt.Print(err)
+			panic("we are buggered")
+		 }else {
+			 fmt.Print(err)
+		 }
 
 		var a int = 4
 		var b int32
